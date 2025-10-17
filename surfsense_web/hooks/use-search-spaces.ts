@@ -21,7 +21,7 @@ export function useSearchSpaces() {
 			try {
 				setLoading(true);
 				const response = await fetch(
-					`${process.env.NEXT_PUBLIC_FASTAPI_BACKEND_URL}/api/v1/searchspaces`,
+					`${process.env.NEXT_PUBLIC_FASTAPI_BACKEND_URL}/api/v1/searchspaces/`,
 					{
 						headers: {
 							Authorization: `Bearer ${localStorage.getItem("surfsense_bearer_token")}`,
@@ -54,7 +54,7 @@ export function useSearchSpaces() {
 		setLoading(true);
 		try {
 			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_FASTAPI_BACKEND_URL}/api/v1/searchspaces`,
+				`${process.env.NEXT_PUBLIC_FASTAPI_BACKEND_URL}/api/v1/searchspaces/`,
 				{
 					headers: {
 						Authorization: `Bearer ${localStorage.getItem("surfsense_bearer_token")}`,
